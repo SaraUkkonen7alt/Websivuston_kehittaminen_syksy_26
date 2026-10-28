@@ -41,7 +41,7 @@ form {
 }
 
 label {
-    front-weight: bold;
+    font-weight: bold;
 }
 
     input[type="text"], input[type="email"] {
