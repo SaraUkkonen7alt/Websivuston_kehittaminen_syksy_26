@@ -1,6 +1,7 @@
 p{
     color: blue;
 }
+
 body{
      background-color: lightgray;
     font-family: Arial, sans-serif;
@@ -14,6 +15,7 @@ h1 {
 p {
     color:blue;
 }
+
 .content-box {
     padding: 20px;
     margin: 10px 0;
@@ -71,7 +73,7 @@ label {
         transition: background-color 0.3s ease;
       }
 
-      .transition-button :hover {
+      .transition-button:hover {
         background-color: lightcoral;
       }
 
