@@ -17,8 +17,8 @@
         <header>
             <h1 style="color: red;">Welcome to my Page</h1>
             <nav class="responsive-nav">
-                <button class="menu-toggle">☰ Menu</button>
-                <ul class="nav-list">
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">☰ Menu</button>
+                <ul class="nav-list" id="main-nav">
                     <li><a href="index.html">About</a></li>
                     <li><a href="studies.html">Studies</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -104,6 +104,16 @@
     <footer>
         <p>Copyright 2026</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+    </script>
 
 </body>
 </html>
