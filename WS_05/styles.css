@@ -55,12 +55,19 @@ body {
   }
 }
 
+.responsive-nav .menu-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .responsive-nav .menu-toggle {
   display: none;
   color: #111111;
   background-color: #ffffff;
   border: 1px solid #333333;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 .responsive-nav .nav-list {
@@ -79,6 +86,16 @@ body {
 @media (max-width: 600px) {
   .responsive-nav .nav-list {
     display: none;
+  }
+
+  .responsive-nav .menu-checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .responsive-nav .menu-checkbox:checked ~ .nav-list {
+    display: flex;
+    flex-direction: column;
   }
 
   .responsive-nav .menu-toggle {
